@@ -50,14 +50,11 @@
   height: calc(100vh - $header-height);
 }
 
-// Block
-.list {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  font-size: 2rem;
+// SCSS : mixins and extends concept
 
-  // Element
+// BLOCK
+.accordion {
+  // ELEMENT
   &__item {
     display: flex;
     align-items: center;
@@ -65,13 +62,26 @@
     font-size: 1.8rem;
     padding: 10px;
     border-radius: 4px;
-    cursor: pointer;
-    &:hover {
-      background-color: $grey-light;
+    font-weight: 900;
+
+    // MODIFIER
+    &__icon {
+      cursor: pointer;
+      transition: 1s;
+    }
+    &__active {
+      transform: rotate(-90deg);
     }
 
     &__text {
-      font-weight: 400;
+      font-weight: inherit;
     }
   }
+}
+
+.todo__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 20px;
 }
