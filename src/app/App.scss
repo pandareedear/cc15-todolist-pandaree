@@ -1,4 +1,4 @@
-@import '../styles/global.scss';
+@import "../styles/global.scss";
 
 .todo {
   display: grid;
@@ -23,4 +23,17 @@
   flex-direction: column;
   gap: 5px;
   padding: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .todo {
+    &__sidebar {
+      display: none;
+    }
+
+    &__content {
+      grid-row: 2/-1;
+      grid-column: 1/-1;
+    }
+  }
 }
