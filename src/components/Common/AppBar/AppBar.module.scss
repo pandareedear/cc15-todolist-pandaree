@@ -1,6 +1,4 @@
-@import "../index.scss";
-
-// HEADER
+@import '../../../styles/global.scss';
 
 .header {
   display: flex;
@@ -9,11 +7,12 @@
 
   background-color: $primary;
   height: $header-height;
-  padding: 5px 20px;
+  padding: 5px 30px;
 
   &__logo {
-    font-size: 2.4rem;
+    font-size: $text-2xl;
     color: $white;
+    padding-left: 15px;
     display: flex;
     cursor: pointer;
   }
@@ -21,11 +20,12 @@
   &__text {
     flex: 1;
     color: $white;
+
     & > h1 {
-      font-size: 2.4 rem;
-      display: inline;
+      font-size: $text-2xl;
     }
   }
+
   &__search {
     min-width: 300px;
   }
